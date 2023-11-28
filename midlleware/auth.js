@@ -11,11 +11,4 @@ export const verifyToken = (req,res, next)=>{
     next(); 
 }
 
-export const isAuthenticated = (req, res, next) => {
-    if (!req.session.user) {
-      return res.status(401).json({ status: false, message: "Utilisateur non connecté" });
-    }
-  
-    next();
-};
   

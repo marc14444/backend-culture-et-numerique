@@ -1,6 +1,6 @@
 import SiteTouristiqueControllers from "../controllers/site.js";
 import { Router } from "express";
-import { verifyToken } from "../Midlleware/auth.js";
+import { verifyToken } from "../midlleware/auth.js";
 const router = Router();
 
 router.get("/",verifyToken, SiteTouristiqueControllers.getAll);
